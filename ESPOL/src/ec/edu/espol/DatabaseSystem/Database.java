@@ -10,17 +10,12 @@ public class Database{
 
     public static Database getInstance() {
         if (instance == null) {
-            synchronized (Database.class) {
-                if (instance == null) {
-                    instance = new Database();
-                }
-        }
+            instance = new Database();
         }
         return instance;
     }
 
     public void ejecutarConsulta(String query) {
-        // Lógica para ejecutar la consulta SQL en la base de datos
         System.out.println("Ejecutando consulta: " + query);
     }
 
